@@ -3,7 +3,7 @@
   Added to Cart!
 </div>
 <section id="section-search">
-  <div class="input-group mb-3" *ngIf="temp2 != undefined">
+  <div class="custom input-group mb-3" *ngIf="temp2 != undefined">
     <input
       [(ngModel)]="searchDrink"
       type="text"
@@ -17,6 +17,7 @@
 </section>
 <section id="section-mosiac">
   <div class="container">
+    <span *ngIf="temp2 != undefined">**Click on the image to see how it's made</span>
     <div class="row">
       <div
         *ngFor="let item of temp2; index as i"
