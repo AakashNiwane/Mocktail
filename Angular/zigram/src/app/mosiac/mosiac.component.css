@@ -1,0 +1,30 @@
+#section-mosiac {
+  margin-top: 25px;
+}
+
+#section-mosiac button {
+  color: white;
+}
+
+#section-search {
+  margin: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+#section-search div {
+  width: 700px !important;
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.alert {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  background-color: #6eb193;
+}

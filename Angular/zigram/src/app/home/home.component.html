@@ -1,0 +1,120 @@
+<section id="section-image-slider">
+  <div
+    id="carouselExampleCaptions"
+    class="carousel slide"
+    data-bs-ride="carousel"
+  >
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide-to="2"
+        aria-label="Slide 3"
+      ></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="https://imagesvc.meredithcorp.io/v3/jumpstartpure/image?url=https://timeincsecure-a.akamaihd.net/rtmp_uds/1260616200/201903/2393/1260616200_6013655455001_6013636754001-vs.jpg?pubId=1260616200&videoId=6013636754001&w=1280&h=720&q=90&c=cc"
+          class="d-block w-100"
+          alt="drink1"
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=1200&h=600&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F35%2F2019%2F04%2F03223353%2Fchampagne-bottles-in-trash-giving-up-alcohol.jpg"
+          class="d-block w-100"
+          alt="drink2"
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2017%2F01%2Ffranciacorta-saten-family-FT-BLOG1116-2000.jpg&q=85"
+          class="d-block w-100"
+          alt="drink3"
+        />
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+<hr />
+<section id="section-catalog">
+  <h1 class="mb-5">Pick the ingredient</h1>
+  <div class="flex-container">
+    <div class="card" style="width: 300px; height: 500px">
+      <img
+        src="https://www.thecocktaildb.com/images/ingredients/Gin.png"
+        class="card-img-top"
+        alt="https://www.thecocktaildb.com/images/ingredients/Gin.png"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Gin</h5>
+        <p class="card-text">
+          Lorem ipsum dolor sit amet Ipsa consectetur adipisicing elit. Ipsa
+          natus culpa reiciendis reiciendis!
+        </p>
+        <button
+          class="btn btn-primary w-100"
+          (click)="getCategoryDrinks('gin')"
+        >
+          Select
+        </button>
+      </div>
+    </div>
+    <div class="card" style="width: 300px; height: 500px">
+      <img
+        src="https://www.thecocktaildb.com/images/ingredients/Vodka.png"
+        class="card-img-top"
+        alt="https://www.thecocktaildb.com/images/ingredients/Vodka.png"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Vodka</h5>
+        <p class="card-text">
+          Lorem ipsum dolor sit amet Ipsa consectetur adipisicing elit. Ipsa
+          natus culpa reiciendis reiciendis!
+        </p>
+        <button
+          class="btn btn-primary w-100"
+          (click)="getCategoryDrinks('vodka')"
+        >
+          Select
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <app-mosiac [allCategorizedDrinks]="allCategorizedDrinks"></app-mosiac>
+</section>

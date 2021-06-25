@@ -1,0 +1,39 @@
+<section id="section-search">
+  <div *ngIf="this.cartList.length <= 0">
+    <div
+      style="
+        height: 395px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <span>Cart is Empty</span>
+    </div>
+  </div>
+</section>
+<section id="section-mosiac">
+  <div class="container">
+    <div class="row">
+      <div
+        *ngFor="let item of cartList; index as i"
+        class="col-3 card"
+        style="width: 18rem; padding: 10px; margin: 15px; cursor: pointer"
+      >
+        <img
+          [src]="item.strDrinkThumb"
+          class="card-img-top"
+          [alt]="item.idDrink"
+        />
+        <div class="card-body">
+          <p class="card-text">
+            {{ item.strDrink }}
+          </p>
+          <button class="btn btn-danger w-100" (click)="removeFromCart(item)">
+            Remove
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

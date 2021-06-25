@@ -1,0 +1,45 @@
+<hr />
+<div *ngIf="displayAlertForCart" class="alert alert-success" role="alert">
+  Added to Cart!
+</div>
+<section id="section-search">
+  <div class="input-group mb-3" *ngIf="temp2 != undefined">
+    <input
+      [(ngModel)]="searchDrink"
+      type="text"
+      class="form-control"
+      placeholder="Search Drink"
+      aria-label="Search Drink"
+      aria-describedby="basic-addon2"
+      (keyup)="searchDrinkBtn()"
+    />
+  </div>
+</section>
+<section id="section-mosiac">
+  <div class="container">
+    <div class="row">
+      <div
+        *ngFor="let item of temp2; index as i"
+        class="col-3 card"
+        style="width: 18rem; padding: 10px; margin: 15px; cursor: pointer"
+      >
+        <img
+          [src]="item.strDrinkThumb"
+          class="card-img-top"
+          [alt]="item.idDrink"
+          (click)="getDrinkDetails(item)"
+        />
+        <div class="card-body">
+          <p class="card-text">
+            {{ item.strDrink }}
+          </p>
+          <button class="btn btn-warning w-100" (click)="addToCart(item)">
+            Add to cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-modal [itemData]="itemData" [showModal]="showModal"></app-modal>
+<!-- <app-modal ></app-modal> -->

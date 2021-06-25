@@ -1,0 +1,28 @@
+<div class="modal-container" *ngIf="showModal">
+  <div class="info-container">
+    <img *ngIf="item2" [src]="item2.strDrinkThumb" />
+
+    <span *ngIf="item2.strDrink"
+      >{{ item2.strDrink }} ({{ item2.strAlcoholic }})</span
+    >
+    <!-- <span *ngFor="let x of ingredietList">{{x}}</span> -->
+    <ul>
+      <span>Ingredients -</span>
+      <br />
+      <li *ngIf="item2.strIngredient1">{{ item2.strIngredient1 }}</li>
+      <li *ngIf="item2.strIngredient2">{{ item2.strIngredient2 }}</li>
+      <li *ngIf="item2.strIngredient3">{{ item2.strIngredient3 }}</li>
+      <li *ngIf="item2.strIngredient4">{{ item2.strIngredient4 }}</li>
+      <li *ngIf="item2.strIngredient5">{{ item2.strIngredient5 }}</li>
+      <li *ngIf="item2.strIngredient6">{{ item2.strIngredient6 }}</li>
+      <li *ngIf="item2.strIngredient7">{{ item2.strIngredient7 }}</li>
+      <li *ngIf="item2.strIngredient8">{{ item2.strIngredient8 }}</li>
+      <li *ngIf="item2.strIngredient9">{{ item2.strIngredient9 }}</li>
+      <li *ngIf="item2.strIngredient10">{{ item2.strIngredient10 }}</li>
+      <li *ngIf="item2.strIngredient11">{{ item2.strIngredient11 }}</li>
+    </ul>
+    <button class="btn btn-warning w-100" (click)="closeModelHandler()">
+      Close
+    </button>
+  </div>
+</div>
