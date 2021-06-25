@@ -1,2 +1,0 @@
-# Mocktail
-Angular &amp; ExpressJS
